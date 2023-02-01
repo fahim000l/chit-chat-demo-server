@@ -12,7 +12,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chit-chat-demo.web.app",
+    origin: "https://chit-chat-demo.web.app/",
     methods: ["GET", "POST"],
   },
 });
