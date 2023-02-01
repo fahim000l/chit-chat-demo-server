@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const http = require("https");
+const http = require("http");
 const { Server } = require("socket.io");
 
 const port = process.env.PORT || 5000;
@@ -12,7 +12,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chit-chat-demo.web.app/",
+    origin: "*",
     methods: ["GET", "POST"],
   },
 });
